@@ -1,0 +1,52 @@
+// fonts
+$font-jp: "Roboto", "M PLUS 1p", "Hiragino Kaku Gothic Pro",
+  "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue",
+  Helvetica, Arial, sans-serif;
+$font-en: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size: 1.6em;
+$font-weight: 700;
+$line-height-ttl: 1.5;
+$line-height-txt: 1.6;
+$letter-spacing-txt: 0;
+$letter-spacing-ttl: 0.068em;
+
+// Basic colors
+$color-white: #fff;
+$color-gray1: #696969;
+$color-gray2: #121212;
+$color-black: #131d34;
+
+$color-green1: #d4f1f8;
+$color-green2: #e9f8fb;
+$color-green3: #2bb8d9;
+$color-green4: #2498b3;
+
+// 変数の定義
+// min-width
+$breakpoint-up: (
+  "sm": "screen and (min-width: 767px)",
+  "md": "screen and (min-width: 1279px)",
+  "lg": "screen and (min-width: 1919px)",
+  "wrap": "screen and (min-width: 1279px)",
+) !default;
+
+// max-width
+$breakpoint-down: (
+  "sm": "screen and (max-width: 640px)",
+  "md": "screen and (max-width: 961px)",
+  "lg": "screen and (max-width: 1280px)",
+  "wrap": "screen and (max-width: 1280px)",
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}

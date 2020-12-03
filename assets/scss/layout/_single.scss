@@ -1,0 +1,17 @@
+.l-single {
+  max-width: 1553px;
+  grid-row: 2/3;
+  margin-left: 100px;
+  margin-right: 100px;
+
+  @include mq-down(md) {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  @include mq-down(sm) {
+    margin-left: 20px;
+    margin-right: 20px;
+    // padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,30 @@
+.p-archive {
+  width: auto;
+  height: 100%;
+  > h2 {
+    padding-top: 67px;
+    @include mq-down(md) {
+      padding-top: 43px;
+    }
+    @include mq-down(sm) {
+      padding-top: 35px;
+      font-size: 2.8rem;
+      line-height: 1.2;
+    }
+  }
+  > p {
+    padding-top: 33px;
+    padding-bottom: 70px;
+    font-weight: 300;
+    @include mq-down(md) {
+      padding-top: 33px;
+      padding-bottom: 37px;
+    }
+    @include mq-down(sm) {
+      padding-top: 33px;
+      padding-bottom: 20px;
+      line-height: 1.2;
+      font-weight: normal;
+    }
+  }
+}

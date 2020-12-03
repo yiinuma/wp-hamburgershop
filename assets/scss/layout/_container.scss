@@ -1,0 +1,17 @@
+.l-container {
+  position: relative;
+  max-width: 1920px;
+  width: auto;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-rows: 217px auto 150px;
+  // grid-template-columns: 1fr minmax(20px, 367px);
+  grid-template-columns: minmax(690px, 1552px) minmax(20px, 367px);
+
+  @include mq-down(md) {
+    display: block;
+    overflow: hidden;
+  }
+}

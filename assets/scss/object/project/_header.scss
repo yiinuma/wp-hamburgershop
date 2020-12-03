@@ -1,0 +1,121 @@
+.p-header__inner {
+  width: auto;
+  height: 100%;
+  background-color: #fff7ef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  @include mq-down(md) {
+    position: relative;
+    flex-direction: column;
+    height: 217px;
+  }
+
+  .sidebar-btn {
+    position: absolute;
+    top: 18px;
+    right: 26px;
+    color: #707070;
+    display: none;
+
+    @include mq-down(md) {
+      display: inline-block;
+      right: 32px;
+    }
+
+    @include mq-down(sm) {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+    }
+
+    h2 {
+      font-size: 3.4rem;
+      line-height: 1.4;
+
+      @include mq-down(sm) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  a {
+    margin-left: calc(65 / 1553 * 100%);
+    display: inline-block;
+
+    .p-header__ttl {
+      // font-size: calc(ZZ + ((1vw - XX) * YY))
+      // XX = ビューポートの最小幅 / 100　のrem変換値
+      // YY = 100 * 文字サイズ可変量 / ビューポート可変量
+      // ZZ = 最小文字サイズのrem変換値
+      // XX = 834 /100 * 0.1rem
+      // YY = 100 * (64 - 40 ) / (1920 - 834)
+      // ZZ = 40 * 0.1rem
+      font-size: calc(4rem + ((1vw - 0.834rem) * 2.21));
+      /*4rem-6.4remで可変*/
+      font-weight: 700;
+      line-height: 84px;
+      // padding-left: 65px;
+      color: #707070;
+
+      @include mq-down(md) {
+        margin-top: 40px;
+        font-size: 4rem;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  .p-search-form {
+    width: calc(566 / 1553 * 100%);
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include mq-down(md) {
+      margin-right: 0;
+      width: calc(446 / 834 * 100%);
+      margin-bottom: 40px;
+    }
+
+    @include mq-down(sm) {
+      width: calc(310 / 375 * 100%);
+    }
+
+    i {
+      position: absolute;
+      left: 15px;
+      font-size: 2.4rem;
+    }
+
+    &__keyword {
+      display: block;
+      width: 396px;
+      height: 46px;
+      margin-right: 14px;
+      padding-left: 3em;
+      background-color: #fff;
+      border: solid 1px #707070;
+      border-radius: 10px;
+    }
+
+    &__submit {
+      width: 136px;
+      height: 46px;
+      background-color: #f2ede9;
+      font-family: "M PLUS 1p";
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #707070;
+      border: solid 1px #707070;
+      border-radius: 10px;
+
+      @include mq-down(md) {
+        min-width: 58px;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.p-footer__inner {
+  position: relative;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  // width: auto;
+  text-align: center;
+  font-family: "M PLUS 1p";
+}
+.p-footer__link {
+  ul {
+    position: absolute;
+    top: 43px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 300px;
+
+    li {
+      display: inline-block;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      font-weight: 400;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  p {
+    position: absolute;
+    left: 50%;
+    top: 105px;
+    transform: translate(-50%, 0);
+    font-size: 1.4rem;
+    line-height: 1.7;
+    font-weight: 300;
+    color: white;
+  }
+}

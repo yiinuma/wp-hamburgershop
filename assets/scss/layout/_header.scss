@@ -1,0 +1,9 @@
+.l-header {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  z-index: 1000;
+
+  @include mq-down(md) {
+    grid-column: 1/3;
+  }
+}

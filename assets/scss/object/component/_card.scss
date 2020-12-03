@@ -1,0 +1,139 @@
+.c-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+
+  @include mq-down(sm) {
+    flex-direction: column;
+  }
+
+  &__thumbnail {
+    width: 50%;
+    // height: 100%;
+
+    @include mq-down(sm) {
+      width: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      vertical-align: bottom;
+      width: 100%;
+      height: 471px;
+
+      @include mq-down(md) {
+        height: 354px;
+      }
+
+      @include mq-down(sm) {
+        height: calc(230 / 336 * 100%);
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__contents {
+    width: 50%;
+    background-color: #3c2b1c;
+    color: #fff;
+    font-family: "M PLUS 1p";
+    line-height: 1.2;
+
+    @include mq-down(sm) {
+      width: auto;
+    }
+
+    .c-card__heading a {
+      display: block;
+      margin-top: calc(60 * 100% / 1353 / 0.5);
+      margin-left: 64px;
+      font-size: 3.6rem;
+      font-weight: 400;
+      color: #fff;
+
+      @include mq-down(md) {
+        margin-top: 33px;
+        margin-left: 35px;
+        font-size: 2rem;
+      }
+      @include mq-down(sm) {
+        margin-top: 33px;
+        margin-left: 17px;
+        font-size: 2rem;
+      }
+    }
+
+    .c-card__caption h2 {
+      margin-top: calc(60 * 100% / 1353 / 0.5);
+      margin-left: 63px;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: #fff;
+
+      @include mq-down(md) {
+        margin-top: 31px;
+        margin-left: 35px;
+        font-size: 1.6rem;
+      }
+      @include mq-down(sm) {
+        margin-top: 31px;
+        margin-left: 17px;
+      }
+    }
+
+    p {
+      margin-top: calc(22 * 100% / 1353 / 0.5);
+
+      margin-left: 63px;
+      margin-right: 63px;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #fff;
+
+      @include mq-down(md) {
+        margin-top: 13px;
+        margin-left: 35px;
+        margin-right: 35px;
+      }
+
+      @include mq-down(sm) {
+        height: 114px;
+        margin-top: 13px;
+        margin-left: 17px;
+        margin-right: 61px;
+        line-height: 1.3;
+        overflow: hidden;
+      }
+    }
+
+    .c-card__button {
+      text-align: center;
+
+      a {
+        margin-top: calc(60 * 100% / 1353 / 0.5);
+        display: block;
+        @include mq-down(md) {
+          margin-top: calc(45 * 100% / 768 / 0.5);
+        }
+        @include mq-down(sm) {
+          margin-top: 40px;
+          margin-bottom: calc(40 * 100% / 336);
+        }
+
+        button {
+          padding: 30px 106px;
+          font-size: 1.6rem;
+          font-weight: 300;
+          background-color: #fff;
+          color: #707070;
+          border-radius: 38px;
+
+          @include mq-down(md) {
+            padding: 13px 41px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+.p-branch-menu {
+  position: relative;
+  margin-top: calc(120 / 1553 * 100%);
+  display: grid;
+  // grid-template-rows: 120px 1fr;
+  grid-template-columns:
+    minmax(40px, calc(111 / 1553 * 100%)) minmax(357px, 625px)
+    calc(80 / 1553 * 100%) minmax(357px, 625px) minmax(40px, calc(111 / 1553 *
+          100%));
+
+  @include mq-down(md) {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 3% auto 2% auto 3%;
+  }
+
+  @include mq-down(sm) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  &__list01 {
+    height: 100%;
+    grid-column: 2/3;
+
+    @include mq-down(sm) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list02 {
+    height: 100%;
+    grid-column: 4/5;
+  }
+
+  &__list01,
+  &__list02 {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom;
+    }
+
+    h2 {
+      position: absolute;
+      top: calc(20 / 1193 * 100%);
+      left: calc(19 / 625 * 100%);
+      font-size: 8rem;
+      line-height: 1.1;
+      color: #eaeaea;
+
+      @include mq-down(md) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__list--dl01,
+  &__list--dl02 {
+    display: inline-block;
+    height: 174px;
+    font-family: "M PLUS 1p";
+    background-color: #fff;
+    opacity: 0.8;
+    color: #3c2a10;
+
+    dt {
+      padding-top: 22px;
+      padding-left: 19px;
+      font-size: 2.4rem;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+    dd {
+      padding-top: 25px;
+      padding-left: 19px;
+      padding-right: 25px;
+      padding-bottom: 3.5rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
+
+  &__list--dl01 {
+    overflow: hidden;
+    position: absolute;
+    bottom: calc(211px + 100% / 625);
+    left: calc(20 / 625 * 100%);
+    right: calc(20 / 625 * 100%);
+  }
+
+  &__list--dl02 {
+    overflow: hidden;
+    position: absolute;
+    bottom: calc(20px + 100% / 625);
+    left: calc(20 / 625 * 100%);
+    right: calc(20 / 625 * 100%);
+  }
+}
+
+.access {
+  margin-top: calc(154 / 1552 * 100%);
+  height: auto;
+  font-family: "M PLUS 1p";
+  background-color: #000;
+
+  @include mq-down(md) {
+    margin-top: 40px;
+  }
+
+  &__map {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    @include mq-down(sm) {
+      position: relative;
+      padding-bottom: 177.78%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+      opacity: 0.6;
+    }
+
+    &--ttl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 950px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.29);
+      opacity: 1;
+      color: #fff;
+      font-weight: 400;
+      @include mq-down(sm) {
+        height: calc(415 / 691 * 100%);
+      }
+
+      h2 {
+        margin-top: calc(90 / 1552 * 100%);
+        margin-left: calc(119 / 1552 * 100%);
+        font-size: 3.6rem;
+        line-height: 1.2;
+        opacity: 1;
+
+        @include mq-down(md) {
+          margin-top: calc(40 / 834 * 100%);
+          margin-left: 42px;
+        }
+
+        @include mq-down(sm) {
+          margin-top: calc(46 / 375 * 100%);
+          font-size: 3rem;
+        }
+      }
+
+      p {
+        margin-top: calc(127 / 1552 * 100%);
+        margin-left: calc(119 / 1552 * 100%);
+        margin-right: calc(134 / 1552 * 100%);
+        line-height: 2;
+
+        @include mq-down(md) {
+          overflow: hidden;
+          margin-top: calc(20 / 834 * 100%);
+          margin-left: 42px;
+          margin-right: 29px;
+        }
+
+        @include mq-down(sm) {
+          font-size: 1.4rem;
+          line-height: 2.2;
+          margin-top: 0;
+          margin-left: 40px;
+          margin-right: 40px;
+          height: 510px;
+          // overflow: hidden;
+        }
+      }
+    }
+  }
+}
