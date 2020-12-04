@@ -7,8 +7,8 @@
 
     <div class="p-branch-menu">
         <div class="p-branch-menu__list01">
-            <a href="<?php echo get_template_directory_uri();?>/page.php">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/takeout.png " alt="" />
+            <a href="<?php echo esc_url(get_template_directory_uri());?>/page.php">
+                <img src="<?php echo esc_url(get_template_directory_uri());?>/assets/img/takeout.png " alt="" />
                 <h2>Take Out<br />ー</h2>
                 <dl class="p-branch-menu__list--dl01">
                     <dt>小見出しが入ります</dt>
@@ -25,8 +25,8 @@
             </a>
         </div>
         <div class="p-branch-menu__list02">
-            <a href="<?php echo get_template_directory_uri();?>/page.php">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/eatin.png" alt="" />
+            <a href="<?php echo esc_url(get_template_directory_uri());?>/page.php">
+                <img src="<?php echo esc_url(get_template_directory_uri());?>/assets/img/eatin.png" alt="" />
                 <h2>Eat In<br />ー</h2>
                 <dl class="p-branch-menu__list--dl01">
                     <dt>小見出しが入ります</dt>

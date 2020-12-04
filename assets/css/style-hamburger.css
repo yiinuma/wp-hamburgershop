@@ -463,7 +463,6 @@ body.is-open {
   .l-archive {
     margin-left: 20px;
     margin-right: 20px;
-    padding-bottom: 30px;
   }
 }
 
@@ -663,6 +662,7 @@ body.is-open {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 20px;
   }
 }
 
@@ -828,74 +828,118 @@ body.is-open {
 .c-pager {
   margin-top: 105px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 @media screen and (max-width: 640px) {
   .c-pager {
     margin-top: 60px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
 }
 
-.c-pager__pagination {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #707070;
-  font-weight: 400;
-  line-height: 35px;
-}
-
-.c-pager__pagination--list, .c-pager__pagination--pre, .c-pager__pagination--next {
-  margin-right: 20px;
-  border: none;
-  color: #707070;
+.c-pager .wp-pagenavi {
+  text-align: center;
+  /*その他、必要があれば以下のクラスにcssを指定する*/
 }
 
 @media screen and (max-width: 640px) {
-  .c-pager__pagination--list {
-    display: none;
-  }
-  .c-pager__pagination--pre {
-    position: absolute;
-    left: 0;
-  }
-  .c-pager__pagination--pre::after {
-    content: "　前へ";
-  }
-  .c-pager__pagination--next {
-    position: absolute;
-    right: 0;
-  }
-  .c-pager__pagination--next::before {
-    content: "次へ　";
+  .c-pager .wp-pagenavi {
+    position: relative;
+    width: auto;
+    height: 100%;
   }
 }
 
-.c-pager__pagination .page {
+.c-pager .wp-pagenavi span,
+.c-pager .wp-pagenavi a {
+  /*数字部分の共通CSS　大きさなど*/
   display: inline-block;
-  margin-right: 15px;
+  color: #707070;
   width: 35px;
   height: 35px;
-  color: #707070;
-  background-color: #fff;
+  margin-right: 15px;
+  line-height: 35px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  background: #fff;
   border: 1px solid #707070;
-  text-align: center;
 }
 
 @media screen and (max-width: 640px) {
-  .c-pager__pagination .page {
+  .c-pager .wp-pagenavi span,
+  .c-pager .wp-pagenavi a {
     display: none;
   }
 }
 
-.c-pager__pagination .smaller {
-  background-color: #3c2b1c;
+.c-pager .wp-pagenavi span.current,
+.c-pager .wp-pagenavi a.current {
+  /*現在のページ*/
   color: #fff;
+  background: #3c2b1c;
+}
+
+@media screen and (max-width: 640px) {
+  .c-pager .wp-pagenavi span.current,
+  .c-pager .wp-pagenavi a.current {
+    display: none;
+  }
+}
+
+.c-pager .wp-pagenavi .pages {
+  border: none;
+  width: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .c-pager .wp-pagenavi .pages {
+    display: none;
+  }
+}
+
+.c-pager .wp-pagenavi .pages::before {
+  content: "page";
+}
+
+@media screen and (max-width: 640px) {
+  .c-pager .wp-pagenavi .pages::before {
+    display: none;
+  }
+}
+
+.c-pager .wp-pagenavi .previouspostslink {
+  border: none;
+  width: auto;
+  background-color: #fffdfa;
+}
+
+@media screen and (max-width: 640px) {
+  .c-pager .wp-pagenavi .previouspostslink {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+  }
+  .c-pager .wp-pagenavi .previouspostslink::after {
+    content: "前へ";
+  }
+}
+
+.c-pager .wp-pagenavi .nextpostslink {
+  border: none;
+  width: auto;
+  background-color: #fffdfa;
+}
+
+@media screen and (max-width: 640px) {
+  .c-pager .wp-pagenavi .nextpostslink {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+  }
+  .c-pager .wp-pagenavi .nextpostslink::before {
+    content: "次へ";
+  }
 }
 
 .p-header__inner {

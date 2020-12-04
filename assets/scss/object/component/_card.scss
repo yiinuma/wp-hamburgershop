@@ -6,6 +6,7 @@
 
   @include mq-down(sm) {
     flex-direction: column;
+    margin-bottom: 20px;
   }
 
   &__thumbnail {
