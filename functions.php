@@ -24,6 +24,15 @@
         wp_enqueue_style('hamburger-css',get_template_directory_uri().'/assets/css/style-hamburger.css',array());
     }
     add_action( 'wp_enqueue_scripts','hamburger_script' );
+    
+    // 引数には好きなサイズを指定できるようにしています。使える値はthe_post_thumbnail()と同じ、"thumbnail", "medium", "large", "full"の4種です。
+    function get_thumb_img($size = 'full') {
+        $thumb_id = get_post_thumbnail_id();                         // アイキャッチ画像のIDを取得
+        $thumb_img = wp_get_attachment_image_src($thumb_id, $size);  // $sizeサイズの画像内容を取得
+        $thumb_src = $thumb_img[0];    // 画像のurlだけ取得
+        $thumb_alt = get_the_title();  //alt属性に入れるもの（記事のタイトルにしています）
+        return '<img src="'.$thumb_src.'" alt="'.$thumb_alt.'">';
+      }
 
 
 
