@@ -1,4 +1,25 @@
-.p-single {
+@charset "UTF-8";
+
+.editor-styles-wrapper {
+  // メインのカラム幅
+  // 左右に15pxのpaddingがあるので、コンテンツは830px-30px
+  .wp-block {
+    max-width: 830px !important;
+    width: auto !important;
+  }
+
+  //「幅広」ブロックの幅、コンテンツは1080px-30px
+  .wp-block[data-align="wide"] {
+    max-width: 1080px;
+    width: auto !important;
+  }
+
+  //「全幅」ブロックの幅
+  .wp-block[data-align="full"] {
+    max-width: none;
+    width: auto !important;
+  }
+
   width: auto;
   height: 100%;
   font-family: "M PLUS 1p";
@@ -80,102 +101,69 @@
     }
   }
 
-  .img-100 {
+  .size-large img {
     width: 100%;
-    margin-bottom: 60px;
-  }
-
-  .img-left {
-    display: flex;
     height: auto;
     margin-bottom: 60px;
+    // object-fit: cover;
+    @include mq-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
 
+  .wp-block-media-text {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 60px;
     @include mq-down(sm) {
       margin-bottom: 30px;
     }
 
-    img {
-      width: calc(581 / 1353 * 100%);
-      height: calc(257 / 1353 * 100%);
-
-      @include mq-down(md) {
-        width: calc(306 / 714 * 100%);
-        height: calc(189 / 714 * 100%);
-      }
-
-      @include mq-down(sm) {
-        width: calc(144 / 335 * 100%);
-        height: calc(89 / 335 * 100%);
-      }
-    }
-
-    p {
-      width: calc(733 / 1353 * 100%);
-      height: 191px;
-      margin-left: calc(40 / 1353 * 100%);
-      margin-bottom: 0;
-      overflow: hidden;
-      font-size: 1.6rem;
-      line-height: 1.2;
-      font-weight: 400;
-
-      @include mq-down(md) {
-        width: calc(387 / 714 * 100%);
-        height: 373px;
-        margin-left: calc(20 / 714 * 100%);
-      }
-
-      @include mq-down(sm) {
-        width: calc(183 / 335 * 100%);
-        height: 176px;
-        margin-left: calc(10 / 335 * 100%);
+    &__media {
+      img {
+        height: auto;
+        min-height: 189px;
       }
     }
   }
 
-  .img-right {
-    @extend .img-left;
-
-    p {
-      margin-left: 0;
-      margin-right: calc(40 / 1353 * 100%);
-    }
-  }
-
-  .img-center {
-    text-align: center;
-    margin-bottom: 60px;
-
-    img {
-      width: 581px;
-
-      @include mq-down(sm) {
-        width: 267px;
-      }
-    }
-  }
-
-  .img-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 43px;
-
-    @include mq-down(sm) {
-      padding-bottom: 13px;
-    }
-
-    img {
-      width: calc(438 / 1353 * 100%);
-      height: 100%;
-      margin-bottom: 20px;
-
+  .wp-block-group {
+    margin-bottom: 43px;
+    object-fit: cover;
+    .blocks-gallery-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
       @include mq-down(md) {
-        width: calc(349 / 714 * 100%);
+        &::after {
+          content: "";
+          display: block;
+          width: 49%;
+          height: 205px;
+          @include mq-down(sm) {
+            width: 0;
+            height: 0;
+          }
+        }
       }
 
-      @include mq-down(sm) {
-        width: 100%;
+      .blocks-gallery-item {
+        height: 257px;
+        @include mq-down(md) {
+          height: 205px;
+          margin: 0 16px 16px 0;
+          width: 45%;
+          &:nth-child(even) {
+            margin: 0 0 16px 0;
+          }
+        }
+
+        @include mq-down(sm) {
+          margin-right: 0;
+          width: 100%;
+          height: 205px;
+          object-fit: contain;
+        }
       }
     }
   }
@@ -204,7 +192,7 @@
   }
 
   table,
-  th,
+  tr,
   td {
     border-collapse: collapse;
     border: 1px solid #707070;
@@ -217,22 +205,17 @@
     background-color: #fff;
     font-size: 16px;
 
-    tbody tr th {
+    tbody tr td {
       padding-top: 31px;
       padding-bottom: 30px;
       padding-left: 30px;
-      width: calc(429 / 1353 * 100%);
       font-weight: 400;
-      text-align: left;
-
-      @include mq-down(sm) {
-        width: calc(135 / 336 * 100%);
+      &:first-child {
+        width: calc(429 / 1353 * 100%);
+        @include mq-down(sm) {
+          width: calc(135 / 336 * 100%);
+        }
       }
-    }
-
-    tbody tr td {
-      padding-left: 30px;
-      font-weight: 400;
     }
   }
 

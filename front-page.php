@@ -7,7 +7,7 @@
 
     <div class="p-branch-menu">
         <div class="p-branch-menu__list01">
-            <a href="<?php echo esc_url(get_template_directory_uri());?>/page.php">
+            <a href="<?php echo get_category_link('3'); ?>">
                 <img src="<?php echo esc_url(get_template_directory_uri());?>/assets/img/takeout.png " alt="" />
                 <h2>Take Out<br />ー</h2>
                 <dl class="p-branch-menu__list--dl01">
@@ -25,7 +25,7 @@
             </a>
         </div>
         <div class="p-branch-menu__list02">
-            <a href="<?php echo esc_url(get_template_directory_uri());?>/page.php">
+            <a href="<?php echo get_category_link('2'); ?>">
                 <img src="<?php echo esc_url(get_template_directory_uri());?>/assets/img/eatin.png" alt="" />
                 <h2>Eat In<br />ー</h2>
                 <dl class="p-branch-menu__list--dl01">

@@ -2,6 +2,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 68px;
 
   &--front {
     @extend .c-top-img;
@@ -48,29 +49,26 @@
   }
 
   &--single {
-    @extend .c-top-img;
-    padding-top: calc(220 / 1553 * 100%);
-    padding-bottom: calc(213 / 1553 * 100%);
-    padding-left: calc(86 / 1553 * 100%);
-    background-image: url(../img/top-img-single.png);
+    position: relative;
+    img {
+      width: 100%;
+      height: calc(100vw * 500 / 1552);
+      max-height: 500px;
+      object-fit: cover;
 
-    @include mq-down(md) {
-      padding-top: calc(220 / 834 * 100%);
-      padding-bottom: calc(213 / 834 * 100%);
-      padding-left: calc(86 / 834 * 100%);
-    }
-
-    @include mq-down(sm) {
-      padding-top: calc(91 / 375 * 100%);
-      padding-bottom: calc(91 / 375 * 100%);
-      padding-left: calc(25 / 375 * 100%);
+      @include mq-down(md) {
+        height: calc(100vw * 500 / 834);
+      }
+      @include mq-down(sm) {
+        height: calc(100vw * 224 / 375);
+      }
     }
   }
 
-  &--page {
-    @extend .c-top-img--single;
-    background-image: url(../img/top-img-page.png);
-  }
+  // &--page {
+  //   @extend .c-top-img--single;
+  //   background-image: url(../img/top-img-page.png);
+  // }
 
   &__text {
     color: #fff;
@@ -109,6 +107,10 @@
 
     &--single {
       @extend .c-top-img__text;
+      position: absolute;
+      top: 50%;
+      left: 82px;
+      transform: translate(0, -50%);
       height: 72px;
       font-size: 6rem;
       font-weight: 500;
@@ -116,6 +118,7 @@
 
       @include mq-down(sm) {
         height: 43px;
+        left: 26px;
         font-size: 3.6rem;
         font-weight: 500;
         line-height: 1.2;

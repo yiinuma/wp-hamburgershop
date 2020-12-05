@@ -21,7 +21,7 @@
         wp_enqueue_style('roboto','//fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap',array());
         // wp_enqueue_style('preconnect','//fonts.gstatic.com',array());
         wp_enqueue_style('M+PLUS+1p','//fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&display=swap',array());
-        wp_enqueue_style('hamburger-css',get_template_directory_uri().'/assets/css/style-hamburger.css',array());
+        wp_enqueue_style('hamburger',get_template_directory_uri().'/assets/css/hamburger.css',array());
     }
     add_action( 'wp_enqueue_scripts','hamburger_script' );
     
@@ -35,6 +35,13 @@
       }
 
 
+    ///////////////////////////////////////
+    // Gutenberg用のCSSを読み込む
+    ///////////////////////////////////////
+    add_action( 'enqueue_block_editor_assets', 'add_block_editor_style' );
+    function add_block_editor_style() {
+        wp_enqueue_style( 'block-editor-style', get_theme_file_uri( '/assets/css/editor-style.css' ) );
+    }
 
       
     
