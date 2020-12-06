@@ -16,12 +16,16 @@
     add_filter( 'pre_get_document_title', 'hamburger_title' );
 
     function hamburger_script() {
-        wp_enqueue_script('slide',get_template_directory_uri().'/assets/js/slide.js');
         wp_enqueue_style('font-awesome','//use.fontawesome.com/releases/v5.8.2/css/all.css',array());
         wp_enqueue_style('roboto','//fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap',array());
         // wp_enqueue_style('preconnect','//fonts.gstatic.com',array());
         wp_enqueue_style('M+PLUS+1p','//fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&display=swap',array());
         wp_enqueue_style('hamburger',get_template_directory_uri().'/assets/css/hamburger.css',array());
+
+        wp_deregister_script( 'jquery'); //WordPress 本体の jQuery を登録解除
+        wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js' , "", "3.4.1", true );
+        wp_enqueue_script('slide',get_template_directory_uri().'/assets/js/slide.js');
+
     }
     add_action( 'wp_enqueue_scripts','hamburger_script' );
     

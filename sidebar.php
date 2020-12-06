@@ -1,6 +1,6 @@
 <article class="l-sidebar">
     <div class="p-sidebar__inner" id="sidebar">
-        <button class="l-sidebar-button--close" id="sidebar-button--close">
+        <button id="sidebar-button--close">
             <i class="fas fa-times fa-3x"></i>
         </button>
 

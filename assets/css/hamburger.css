@@ -983,6 +983,7 @@ body.is-open {
   right: 26px;
   color: #707070;
   display: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 961px) {
