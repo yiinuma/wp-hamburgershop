@@ -3,6 +3,7 @@
     // add_theme_support('menus');
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'automatic-feed-links' );
 
     function hamburger_script() {
         wp_enqueue_style('font-awesome','//use.fontawesome.com/releases/v5.8.2/css/all.css',array());
