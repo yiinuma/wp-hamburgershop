@@ -65,16 +65,17 @@
     }
   }
 
-  // &--page {
-  //   @extend .c-top-img--single;
-  //   background-image: url(../img/top-img-page.png);
-  // }
+  &--page {
+    @extend .c-top-img--front;
+    background-image: url(../img/top-img-page.png);
+  }
 
   &__text {
     color: #fff;
     font-family: "M PLUS 1p";
 
-    &--front {
+    &--front,
+    &--page {
       @extend .c-top-img__text;
       height: 36px;
       font-size: 4rem;

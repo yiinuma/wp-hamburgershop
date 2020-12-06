@@ -2,14 +2,15 @@
 
 
 <article class="l-main">
-    <?php
-        if(have_posts()):
-        while(have_posts()):the_post();?>
-
     <div class="c-top-img--single">
         <?php echo get_thumb_img('large'); ?>
         <h1 class="c-top-img__text--single"><?php the_title(); ?></h1>
     </div>
+
+    <?php
+        if(have_posts()):
+        while(have_posts()):the_post();?>
+
 
     <div class="l-single">
         <div class="editor-styles-wrapper">
@@ -21,8 +22,6 @@
         ?>
     <p>表示する記事がありません</p>
     <?php endif; ?>
-
-</article>
 
 </article>
 

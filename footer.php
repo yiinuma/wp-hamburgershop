@@ -3,9 +3,9 @@
         <img src="<?php echo get_template_directory_uri();?>/assets/img/footer_bg.png" alt="footer image" />
         <div class="p-footer__link">
             <ul>
-                <li><a href="#">ショップ情報</a></li>
+                <li><a href="<?php echo get_page_link('11'); ?>">ショップ情報</a></li>
                 <li>|</li>
-                <li><a href="#">ヒストリー</a></li>
+                <li><a href="<?php echo get_page_link('79'); ?>">ヒストリー</a></li>
             </ul>
             <p>Copyright: RaiseTech</p>
         </div>

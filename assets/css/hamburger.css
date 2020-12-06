@@ -489,14 +489,14 @@ body.is-open {
   }
 }
 
-.c-top-img, .c-top-img--front, .c-top-img--archive {
+.c-top-img, .c-top-img--front, .c-top-img--page, .c-top-img--archive {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 68px;
 }
 
-.c-top-img--front {
+.c-top-img--front, .c-top-img--page {
   padding-top: calc(239 / 1553 * 100%);
   padding-bottom: calc(251 / 1553 * 100%);
   padding-left: calc(88 / 1553 * 100%);
@@ -504,7 +504,7 @@ body.is-open {
 }
 
 @media screen and (max-width: 961px) {
-  .c-top-img--front {
+  .c-top-img--front, .c-top-img--page {
     padding-top: calc(126 / 834 * 100%);
     padding-bottom: calc(123 / 834 * 100%);
     padding-left: calc(86 / 834 * 100%);
@@ -512,7 +512,7 @@ body.is-open {
 }
 
 @media screen and (max-width: 640px) {
-  .c-top-img--front {
+  .c-top-img--front, .c-top-img--page {
     padding-top: calc(126 / 375 * 100%);
     padding-bottom: calc(123 / 375 * 100%);
     padding-left: calc(25 / 375 * 100%);
@@ -570,26 +570,30 @@ body.is-open {
   }
 }
 
-.c-top-img__text, .c-top-img__text--front, .c-top-img__text--archive, .c-top-img__text--single, .c-top-img__text--category {
+.c-top-img--page {
+  background-image: url(../img/top-img-page.png);
+}
+
+.c-top-img__text, .c-top-img__text--front, .c-top-img__text--page, .c-top-img__text--archive, .c-top-img__text--single, .c-top-img__text--category {
   color: #fff;
   font-family: "M PLUS 1p";
 }
 
-.c-top-img__text--front {
+.c-top-img__text--front, .c-top-img__text--page {
   height: 36px;
   font-size: 4rem;
   line-height: 1.2;
 }
 
 @media screen and (max-width: 961px) {
-  .c-top-img__text--front {
+  .c-top-img__text--front, .c-top-img__text--page {
     height: 36px;
     font-size: 3.6rem;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .c-top-img__text--front {
+  .c-top-img__text--front, .c-top-img__text--page {
     height: 36px;
   }
 }
