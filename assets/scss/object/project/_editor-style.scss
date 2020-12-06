@@ -219,16 +219,17 @@
     }
   }
 
-  .button_wrapper {
+  .wp-block-button {
     @include mq-down(sm) {
       text-align: center;
     }
 
-    button {
+    .wp-block-button__link {
       padding: 44px 191px;
       margin-bottom: 65px;
       font-size: 1.6rem;
       font-weight: 500;
+      color: #3c2a10;
       background-color: #f2ede9;
       border: solid 1px #707070;
       border-radius: 20px;

@@ -441,6 +441,13 @@ body.is-open {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
+  z-index: 2000;
+}
+
+@media screen and (max-width: 961px) {
+  .l-footer {
+    z-index: 500;
+  }
 }
 
 .l-archive {
@@ -1747,23 +1754,24 @@ body.is-open {
 }
 
 @media screen and (max-width: 640px) {
-  .editor-styles-wrapper .button_wrapper {
+  .editor-styles-wrapper .wp-block-button {
     text-align: center;
   }
 }
 
-.editor-styles-wrapper .button_wrapper button {
+.editor-styles-wrapper .wp-block-button .wp-block-button__link {
   padding: 44px 191px;
   margin-bottom: 65px;
   font-size: 1.6rem;
   font-weight: 500;
+  color: #3c2a10;
   background-color: #f2ede9;
   border: solid 1px #707070;
   border-radius: 20px;
 }
 
 @media screen and (max-width: 640px) {
-  .editor-styles-wrapper .button_wrapper button {
+  .editor-styles-wrapper .wp-block-button .wp-block-button__link {
     padding: 31px calc(50% - 30px);
   }
 }
