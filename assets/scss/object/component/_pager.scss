@@ -1,109 +1,87 @@
 .c-pager {
-  margin-top: 105px;
-  margin-bottom: 30px;
-  text-align: center;
-  @include mq-down(sm) {
-    margin-top: 60px;
-    padding-bottom: 30px;
-  }
-  .wp-pagenavi {
+  &.pc {
+    margin-top: 105px;
+    margin-bottom: 30px;
     text-align: center;
 
-    @include mq-down(sm) {
-      position: relative;
-      width: auto;
-      height: 100%;
-    }
-
-    span,
-    a {
-      /*数字部分の共通CSS　大きさなど*/
-      display: inline-block;
-      color: #707070;
-      width: 35px;
-      height: 35px;
-      margin-right: 15px;
-      line-height: 35px;
-      font-size: 1.6rem;
-      text-decoration: none;
-      background: #fff;
-      border: 1px solid #707070;
+    .wp-pagenavi {
+      text-align: center;
 
       @include mq-down(sm) {
         display: none;
       }
 
-      &.current {
-        /*現在のページ*/
-        color: #fff;
-        background: #3c2b1c;
-
-        @include mq-down(sm) {
-          display: none;
-        }
-      }
-    }
-
-    .pages {
-      border: none;
-      width: auto;
-
-      @include mq-down(sm) {
-        display: none;
-      }
-
-      &::before {
-        content: "page";
-
-        @include mq-down(sm) {
-          display: none;
-        }
-      }
-    }
-
-    /*その他、必要があれば以下のクラスにcssを指定する*/
-    .previouspostslink {
-      border: none;
-      width: auto;
-      background-color: #fffdfa;
-
-      @include mq-down(sm) {
-        position: absolute;
-        left: 0;
+      span,
+      a {
+        /*数字部分の共通CSS　大きさなど*/
         display: inline-block;
+        color: #707070;
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+        line-height: 35px;
+        font-size: 1.6rem;
+        text-decoration: none;
+        background: #fff;
+        border: 1px solid #707070;
 
-        &::after {
-          content: "前へ";
+        &.current {
+          /*現在のページ*/
+          color: #fff;
+          background: #3c2b1c;
         }
       }
-    }
 
-    .nextpostslink {
-      border: none;
-      width: auto;
-      background-color: #fffdfa;
-
-      @include mq-down(sm) {
-        position: absolute;
-        right: 0;
-        display: inline-block;
+      .pages {
+        border: none;
+        width: auto;
 
         &::before {
-          content: "次へ";
+          content: "page";
         }
       }
+
+      /*その他、必要があれば以下のクラスにcssを指定する*/
+      .previouspostslink {
+        border: none;
+        width: auto;
+        background-color: #fffdfa;
+      }
+
+      .nextpostslink {
+        border: none;
+        width: auto;
+        background-color: #fffdfa;
+      }
+
+      // .first {
+      // }
+
+      // .last {
+      // }
+
+      // .smaller {
+      // }
+
+      // .larger {
+      // }
     }
+  }
 
-    // .first {
-    // }
+  &.sp {
+    display: none;
 
-    // .last {
-    // }
+    @include mq-down(sm) {
+      margin-top: 60px;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
 
-    // .smaller {
-    // }
-
-    // .larger {
-    // }
+      a {
+        color: #707070;
+        font-size: 1.6rem;
+      }
+    }
   }
 }

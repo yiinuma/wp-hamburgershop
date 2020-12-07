@@ -38,6 +38,7 @@
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper p,
+.editor-styles-wrapper a,
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ol,
 .editor-styles-wrapper li {
@@ -67,7 +68,8 @@
   line-height: 1.2;
 }
 
-.editor-styles-wrapper p {
+.editor-styles-wrapper p,
+.editor-styles-wrapper a {
   margin-bottom: 30px;
   font-size: 1.6rem;
   line-height: 1.2;
@@ -269,4 +271,44 @@
 .editor-styles-wrapper .pbold {
   font-size: 1.6rem;
   font-weight: 500;
+}
+
+.editor-styles-wrapper .sticky {
+  padding: 20px;
+  background: #f3f3f3;
+}
+
+.editor-styles-wrapper .wp-caption {
+  font-size: 1.3rem;
+}
+
+.editor-styles-wrapper .wp-caption-text {
+  margin-top: -20px;
+}
+
+.editor-styles-wrapper .gallery-caption {
+  font-size: 1.3rem;
+}
+
+.editor-styles-wrapper .bypostauthor {
+  padding: 20px;
+  background: #f0f8ff;
+}
+
+.editor-styles-wrapper .aligncenter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.editor-styles-wrapper .alignleft {
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.editor-styles-wrapper .alignright {
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
 }

@@ -840,34 +840,25 @@ body.is-open {
   }
 }
 
-.c-pager {
+.c-pager.pc {
   margin-top: 105px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-@media screen and (max-width: 640px) {
-  .c-pager {
-    margin-top: 60px;
-    padding-bottom: 30px;
-  }
-}
-
-.c-pager .wp-pagenavi {
+.c-pager.pc .wp-pagenavi {
   text-align: center;
   /*その他、必要があれば以下のクラスにcssを指定する*/
 }
 
 @media screen and (max-width: 640px) {
-  .c-pager .wp-pagenavi {
-    position: relative;
-    width: auto;
-    height: 100%;
+  .c-pager.pc .wp-pagenavi {
+    display: none;
   }
 }
 
-.c-pager .wp-pagenavi span,
-.c-pager .wp-pagenavi a {
+.c-pager.pc .wp-pagenavi span,
+.c-pager.pc .wp-pagenavi a {
   /*数字部分の共通CSS　大きさなど*/
   display: inline-block;
   color: #707070;
@@ -881,79 +872,53 @@ body.is-open {
   border: 1px solid #707070;
 }
 
-@media screen and (max-width: 640px) {
-  .c-pager .wp-pagenavi span,
-  .c-pager .wp-pagenavi a {
-    display: none;
-  }
-}
-
-.c-pager .wp-pagenavi span.current,
-.c-pager .wp-pagenavi a.current {
+.c-pager.pc .wp-pagenavi span.current,
+.c-pager.pc .wp-pagenavi a.current {
   /*現在のページ*/
   color: #fff;
   background: #3c2b1c;
 }
 
-@media screen and (max-width: 640px) {
-  .c-pager .wp-pagenavi span.current,
-  .c-pager .wp-pagenavi a.current {
-    display: none;
-  }
-}
-
-.c-pager .wp-pagenavi .pages {
+.c-pager.pc .wp-pagenavi .pages {
   border: none;
   width: auto;
 }
 
-@media screen and (max-width: 640px) {
-  .c-pager .wp-pagenavi .pages {
-    display: none;
-  }
-}
-
-.c-pager .wp-pagenavi .pages::before {
+.c-pager.pc .wp-pagenavi .pages::before {
   content: "page";
 }
 
-@media screen and (max-width: 640px) {
-  .c-pager .wp-pagenavi .pages::before {
-    display: none;
-  }
-}
-
-.c-pager .wp-pagenavi .previouspostslink {
+.c-pager.pc .wp-pagenavi .previouspostslink {
   border: none;
   width: auto;
   background-color: #fffdfa;
 }
 
-@media screen and (max-width: 640px) {
-  .c-pager .wp-pagenavi .previouspostslink {
-    position: absolute;
-    left: 0;
-    display: inline-block;
-  }
-  .c-pager .wp-pagenavi .previouspostslink::after {
-    content: "前へ";
-  }
-}
-
-.c-pager .wp-pagenavi .nextpostslink {
+.c-pager.pc .wp-pagenavi .nextpostslink {
   border: none;
   width: auto;
   background-color: #fffdfa;
 }
 
+.c-pager.sp {
+  display: none;
+}
+
 @media screen and (max-width: 640px) {
-  .c-pager .wp-pagenavi .nextpostslink {
-    position: absolute;
-    right: 0;
-    display: inline-block;
+  .c-pager.sp {
+    margin-top: 60px;
+    padding-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
   }
-  .c-pager .wp-pagenavi .nextpostslink::before {
-    content: "次へ";
+  .c-pager.sp a {
+    color: #707070;
+    font-size: 1.6rem;
   }
 }
 
@@ -1070,6 +1035,10 @@ body.is-open {
   position: absolute;
   left: 15px;
   font-size: 2.4rem;
+}
+
+.p-header__inner .p-search-form .screen-reader-text {
+  display: none;
 }
 
 .p-header__inner .p-search-form__keyword {
@@ -1548,6 +1517,7 @@ body.is-open {
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper p,
+.editor-styles-wrapper a,
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ol,
 .editor-styles-wrapper li {
@@ -1577,7 +1547,8 @@ body.is-open {
   line-height: 1.2;
 }
 
-.editor-styles-wrapper p {
+.editor-styles-wrapper p,
+.editor-styles-wrapper a {
   margin-bottom: 30px;
   font-size: 1.6rem;
   line-height: 1.2;
@@ -1779,6 +1750,46 @@ body.is-open {
 .editor-styles-wrapper .pbold {
   font-size: 1.6rem;
   font-weight: 500;
+}
+
+.editor-styles-wrapper .sticky {
+  padding: 20px;
+  background: #f3f3f3;
+}
+
+.editor-styles-wrapper .wp-caption {
+  font-size: 1.3rem;
+}
+
+.editor-styles-wrapper .wp-caption-text {
+  margin-top: -20px;
+}
+
+.editor-styles-wrapper .gallery-caption {
+  font-size: 1.3rem;
+}
+
+.editor-styles-wrapper .bypostauthor {
+  padding: 20px;
+  background: #f0f8ff;
+}
+
+.editor-styles-wrapper .aligncenter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.editor-styles-wrapper .alignleft {
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.editor-styles-wrapper .alignright {
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
 }
 
 .p-footer__inner {

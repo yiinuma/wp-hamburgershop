@@ -15,11 +15,15 @@
             <?php echo category_description(); ?>
 
             <?php get_template_part("components/loop_archive"); ?>
-
-            <div class="c-pager">
+            <div class="c-pager pc">
                 <?php if(function_exists("wp_pagenavi")): ?>
                 <?php wp_pagenavi(); ?>
                 <?php endif; ?>
+            </div>
+            <!-- テーマチェック回避がてらに仕様変更 SP用ページネーション追加　-->
+            <div class="c-pager sp">
+                <div class="prev"><?php previous_posts_link('&lt;&lt;  前へ'); ?></div>
+                <div class="next"><?php next_posts_link('次へ &gt;&gt;'); ?></div>
             </div>
         </div>
 

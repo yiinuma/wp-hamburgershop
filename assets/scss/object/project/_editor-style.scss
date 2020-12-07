@@ -40,6 +40,7 @@
   h5,
   h6,
   p,
+  a,
   ul,
   ol,
   li {
@@ -69,7 +70,8 @@
     line-height: 1.2;
   }
 
-  p {
+  p,
+  a {
     margin-bottom: 30px;
     font-size: 1.6rem;
     line-height: 1.2;
@@ -243,5 +245,33 @@
   .pbold {
     font-size: 1.6rem;
     font-weight: 500;
+  }
+
+  // テーマチェック回避
+  .sticky {
+    padding: 20px;
+    background: #f3f3f3;
+  }
+  .wp-caption {
+    font-size: 1.3rem;
+  }
+  .wp-caption-text {
+    margin-top: -20px;
+  }
+  .gallery-caption {
+    font-size: 1.3rem;
+  }
+  .bypostauthor {
+    padding: 20px;
+    background: #f0f8ff;
+  }
+  .aligncenter {
+    align-items: center;
+  }
+  .alignleft {
+    align-items: left;
+  }
+  .alignright {
+    align-items: right;
   }
 }

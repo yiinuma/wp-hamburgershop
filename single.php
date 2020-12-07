@@ -15,6 +15,7 @@
     <div class="l-single">
         <div class="editor-styles-wrapper">
             <?php the_content(); ?>
+            <?php the_tags(); ?>
         </div>
     </div>
     <?php endwhile;
