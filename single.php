@@ -7,15 +7,15 @@
         <h1 class="c-top-img__text--single"><?php the_title(); ?></h1>
     </div>
 
-    <?php
-        if(have_posts()):
-        while(have_posts()):the_post();?>
 
 
     <div class="l-single">
         <div class="editor-styles-wrapper">
+            <?php
+        if(have_posts()):
+            while(have_posts()):the_post();?>
             <?php the_content(); ?>
-            <?php the_tags(); ?>
+            <?php the_tags(''); ?>
         </div>
     </div>
     <?php endwhile;
