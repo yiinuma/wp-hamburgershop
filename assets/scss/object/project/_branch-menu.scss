@@ -100,11 +100,8 @@
   }
 
   &__list--dl02 {
-    overflow: hidden;
-    position: absolute;
+    @extend __list--dl01;
     bottom: calc(20px + 100% / 625);
-    left: calc(20 / 625 * 100%);
-    right: calc(20 / 625 * 100%);
   }
 }
 
