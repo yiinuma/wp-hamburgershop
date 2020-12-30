@@ -100,7 +100,7 @@
   }
 
   &__list--dl02 {
-    @extend __list--dl01;
+    @extend .p-branch-menu__list--dl01;
     bottom: calc(20px + 100% / 625);
   }
 }

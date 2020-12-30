@@ -1154,7 +1154,7 @@ body.is-open {
   }
 }
 
-.p-branch-menu__list--dl01, .p-branch-menu__list--dl02 {
+.p-branch-menu__list--dl01, .p-branch-menu__list--dl02, .p-branch-menu__list--dl02 {
   display: inline-block;
   height: 174px;
   font-family: "M PLUS 1p";
@@ -1163,7 +1163,7 @@ body.is-open {
   color: #3c2a10;
 }
 
-.p-branch-menu__list--dl01 dt, .p-branch-menu__list--dl02 dt {
+.p-branch-menu__list--dl01 dt, .p-branch-menu__list--dl02 dt, .p-branch-menu__list--dl02 dt {
   padding-top: 22px;
   padding-left: 19px;
   font-size: 2.4rem;
@@ -1171,7 +1171,7 @@ body.is-open {
   font-weight: 400;
 }
 
-.p-branch-menu__list--dl01 dd, .p-branch-menu__list--dl02 dd {
+.p-branch-menu__list--dl01 dd, .p-branch-menu__list--dl02 dd, .p-branch-menu__list--dl02 dd {
   padding-top: 25px;
   padding-left: 19px;
   padding-right: 25px;
@@ -1181,7 +1181,7 @@ body.is-open {
   line-height: 1.2;
 }
 
-.p-branch-menu__list--dl01 {
+.p-branch-menu__list--dl01, .p-branch-menu__list--dl02 {
   overflow: hidden;
   position: absolute;
   bottom: calc(211px + 100% / 625);
@@ -1190,11 +1190,7 @@ body.is-open {
 }
 
 .p-branch-menu__list--dl02 {
-  overflow: hidden;
-  position: absolute;
   bottom: calc(20px + 100% / 625);
-  left: calc(20 / 625 * 100%);
-  right: calc(20 / 625 * 100%);
 }
 
 .access {
