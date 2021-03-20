@@ -17,7 +17,7 @@
         <header class="l-header">
             <div class="p-header__inner">
                 <button class="sidebar-btn" id="sidebar-button--open">
-                    <h2>Menu!</h2>
+                    <h2>Menu</h2>
                 </button>
                 <a href="<?php echo esc_url(home_url('/'));?>">
                     <h1 class="p-header__ttl"><?php bloginfo( 'name' );?></h1>
